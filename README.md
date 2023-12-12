@@ -1,15 +1,15 @@
 # Installation
-## Create virtual environment
+Create virtual environment
 ```bash
 python3.9 -m venv .venv
 ```
 
-## Active virtual environment
+Active virtual environment
 ```bash
 source venv/bin/activate
 ```
 
-## Install package
+Install package
 ```bash
 git clone https://github.com/FrancoCabezasPoblete/PyGit && pip install ./PyGit && rm -rf PyGit
 ```
@@ -20,12 +20,12 @@ pyget [command]
 ```
 
 # Compile from source
-## Create virtual environment
+Create virtual environment
 ```bash
 python3.9 -m venv .venv
 ```
 
-## Active virtual environment
+Active virtual environment
 ```bash
 source venv/bin/activate
 ```
