@@ -19,6 +19,18 @@ git clone https://github.com/FrancoCabezasPoblete/PyGit && pip install ./PyGit &
 pyget [command]
 ```
 
+## Commands
+- **Commit**: Commit changes to the repository from the `commit_message.md` file. If the file does not exist, it will be created.
+
+    `commit_message.md` file format:
+    ```markdown
+    <!--Title-->
+    Here goes the title of the commit
+    <!--Description-->
+    Here goes the description of the commit
+    ```
+
+
 # Compile from source
 Create virtual environment
 ```bash
