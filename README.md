@@ -30,12 +30,12 @@ Active virtual environment
 source venv/bin/activate
 ```
 
-## Install dependencies
+Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-## build package
+build package
 ```bash
 pip install . && rm -rf build *.egg-info
 ```
