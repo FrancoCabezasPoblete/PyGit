@@ -1,4 +1,5 @@
 from git import Repo
+import argparse
 import os
 import sys
 
@@ -63,6 +64,7 @@ def has_commits(repo):
         return False
 
 def main(args):
+    
     # Find the repository root
     repo_root = find_repo_root(os.getcwd())
     commit_message_file = os.path.join(repo_root, 'commit_message.md')
@@ -95,11 +97,21 @@ def main(args):
         
     if not has_commits(repo) or repo.is_dirty(working_tree=False):
         repo.index.commit(commit_message)
-
+        
         # Clean the commit message file
         with open(commit_message_file, 'w') as file:
             file.write('<!--Title-->\n\n<!--Description-->\n\n')
         print("Changes committed.")
+        
+        # Check if -p or --push was passed
+        if args.push:
+            try:
+                origin = repo.remote(name='origin')
+                origin.push()
+                print("Changes pushed.")
+            except Exception as e:
+                print(f"Failed to push changes: {e}\nPush changes manually.")
+
     else:
         print("There are no changes to commit.")
     sys.exit(0)

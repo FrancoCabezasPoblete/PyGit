@@ -6,6 +6,7 @@ def main():
     subparsers = parser.add_subparsers(dest="subcommand", help="Subcommands")
 
     commit_parser = subparsers.add_parser('commit', help='Commit a from commit_message.md')
+    commit_parser.add_argument('-p', '--push', action='store_true', help='Push after committing')
     commit_parser.set_defaults(func=commit.main)
 
     # Parse the arguments
