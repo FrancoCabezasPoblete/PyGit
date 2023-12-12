@@ -6,7 +6,7 @@ python3.9 -m venv .venv
 
 Active virtual environment
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 Install package
@@ -39,7 +39,7 @@ python3.9 -m venv .venv
 
 Active virtual environment
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 Install dependencies
