@@ -16,7 +16,7 @@ git clone https://github.com/FrancoCabezasPoblete/PyGit && pip install ./PyGit &
 
 # Program usage
 ```bash
-pyget [command] [options]
+pygit [command] [options]
 ```
 
 ## Commands
